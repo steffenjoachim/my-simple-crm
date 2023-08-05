@@ -1,0 +1,21 @@
+.dialog-add-user-headline{
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.dialog-add-user-frame{
+    height: 500px;
+    display: block;
+}
+
+.name-frame{
+    padding-top: 16px;
+}
+
+.dialog-add-user-button-frame{
+    margin-left: 24px;
+    button{
+        background: rgba(0, 0, 0, 0.2);
+        margin-right: 16px;
+    }
+}
