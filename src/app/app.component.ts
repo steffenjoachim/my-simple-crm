@@ -9,6 +9,9 @@ import { Observable } from 'rxjs';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
   firestore: Firestore = inject(Firestore)
   items$: Observable<any[]>;
 

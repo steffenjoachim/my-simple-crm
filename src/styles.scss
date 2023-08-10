@@ -1,12 +1,9 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-.mr-16{
-    margin-right: 16px;
-}
-
-.full-width{
-    width: 100%;
+@font-face {
+    font-family: EuphoriaScript;
+    src: url('assets/fonts/EuphoriaScript-Regular.ttf');
 }
 
 body {
@@ -16,3 +13,36 @@ body {
     scroll-behavior: smooth;
     overflow-x:hidden;
   }
+
+  .ml-16{
+    margin-left: 16px;
+  }
+
+.mr-16{
+    margin-right: 16px;
+}
+
+.mt-32{
+    margin-top: 32px;
+}
+
+.p-top-16{
+    padding-top: 16px;
+}
+
+.full-width{
+    width: 100%;
+}
+
+.euphoria{
+    font-family: EuphoriaScript, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+.pin-right-upper-corner{
+    position: absolute !important;
+    top: 0;
+    right: 0;
+}

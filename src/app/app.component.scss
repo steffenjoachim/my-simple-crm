@@ -18,12 +18,18 @@
     min-height: 56px;
     display: flex;
     align-items: center;
+    img{
+        height: 56px;
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
 }
 
 mat-toolbar, mat-toolbar-row{
-    min-height: 56px;
-    height: 56px;
-
+    min-height: 64px;
+    height: 64px;
+    background: rgb(152, 131, 68);
+    color: orange;
 }
 
 .menu-items{
@@ -55,5 +61,7 @@ mat-toolbar, mat-toolbar-row{
 
 .router-container{
     padding-left: 56px;
+    padding-right: 56px;
     padding-top: 16px;
 }
+

@@ -4,9 +4,21 @@
 }
 
 .dialog-add-user-frame{
-    height: 500px;
+    height: 700px;
     display: block;
+    position: relative;
+    mat-progress-bar{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
 }
+
+.mat-mdc-progress-bar {
+    --mdc-linear-progress-active-indicator-color: orange;
+}
+
 
 .name-frame{
     padding-top: 16px;

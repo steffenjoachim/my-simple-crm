@@ -1,0 +1,40 @@
+<mat-card class="user-detail-header">
+    <button mat-icon-button class="pin-right-upper-corner" [matMenuTriggerFor]="userMenu">
+        <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #userMenu="matMenu">
+        <button mat-menu-item (click)="editUserDetails()">Edit</button>
+    </mat-menu>
+    <img src="./assets/img/profile-img.png" alt="profile image">
+    <div class="user-details">
+        <h2>{{ user.firstName }} {{user.lastName}}</h2>
+        <p>{{ user.email }}</p>
+    </div>
+</mat-card>
+<mat-card class="mt-32">
+    <button mat-icon-button class="pin-right-upper-corner" [matMenuTriggerFor]="AddressMenu">
+        <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #AddressMenu="matMenu">
+        <button mat-menu-item (click)="editMenu()">Edit</button>
+    </mat-menu>
+    <mat-card-content>
+        <mat-card-title>Address</mat-card-title>
+        {{ user.street }} <br>
+        {{ user.zipCode }} {{user.city}}
+    </mat-card-content>
+</mat-card>
+<mat-card class="mt-32">
+    <button mat-icon-button class="pin-right-upper-corner" [matMenuTriggerFor]="HistoryMenu">
+        <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #HistoryMenu="matMenu">
+        <button mat-menu-item (click)="editHistory()">Edit</button>
+    </mat-menu>
+    <mat-card-content>
+        <mat-card-title>Customer History</mat-card-title>
+        {{ user.birthDate }} <br>
+        {{ user.remarks }} <br>
+        {{ user.history }} 
+    </mat-card-content>
+</mat-card>
