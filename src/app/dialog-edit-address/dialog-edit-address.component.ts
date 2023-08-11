@@ -30,13 +30,6 @@ updateAddress(){
   
 }
 
-// async getUser() {
-//   console.log(this.userId)
-//   this.docRef = doc(collection(this.firestore, 'users'), this.userId);
-//   this.docSnap = await getDoc(this.docRef);
-//   this.user = new User(this.docSnap.data());
-// }
-
 getUser() {
   console.log(this.userId)
   let usersCollection = collection(this.firestore, 'users');
