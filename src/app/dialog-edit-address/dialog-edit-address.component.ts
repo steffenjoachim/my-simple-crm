@@ -25,8 +25,9 @@ updateAddress(){
   const addressDoc = doc(this.usersCollection, this.userId);
   console.log(this.userId)
   updateDoc(addressDoc, this.user.toJSON());
-  this.dialogRef.close();
   this.getUser();
+  this.dialogRef.close();
+  
 }
 
 // async getUser() {
@@ -36,11 +37,13 @@ updateAddress(){
 //   this.user = new User(this.docSnap.data());
 // }
 
-async getUser() {
+getUser() {
   console.log(this.userId)
   let usersCollection = collection(this.firestore, 'users');
-  this.docRef = onSnapshot(doc(this.usersCollection, this.userId), () =>{
-    getDoc(this.userId);
+  let docRef = doc(usersCollection, this.userId);
+  onSnapshot(docRef, (doc) =>{
+    console.log(doc.data());
+    // getDoc(this.userId);
     // this.docSnap = await getDoc(this.docRef);
     // this.user = new User(this.docSnap.data());
   });
