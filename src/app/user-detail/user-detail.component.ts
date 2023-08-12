@@ -12,7 +12,7 @@ import { DialogEditUserComponent } from '../dialog-edit-user/dialog-edit-user.co
   templateUrl: './user-detail.component.html',
   styleUrls: ['./user-detail.component.scss']
 })
-export class UserDetailComponent  implements OnInit{
+export class UserDetailComponent  {
 
   userId: any = "";
   coll: any;
@@ -29,14 +29,6 @@ export class UserDetailComponent  implements OnInit{
       this.getUser();
   }
 
-  ngOnInit(): void{
-    this.route.paramMap.subscribe(paramMap => {
-      this.userId = paramMap.get('id');
-      this.getUser();
-      console.log(this.userId);
-    })
-  }
-
   async getUser() {
     this.docSnap = await getDoc(this.docRef);
     this.user = new User(this.docSnap.data());
@@ -46,18 +38,27 @@ export class UserDetailComponent  implements OnInit{
     const dialog = this.dialog.open(DialogEditUserComponent); 
     dialog.componentInstance.user = new User(this.user.toJSON());
     dialog.componentInstance.userId = this.userId;
+    dialog.afterClosed().subscribe(result => {
+      this.getUser();
+    });
   }
 
   editMenu(){
      const dialog = this.dialog.open(DialogEditAddressComponent);
      dialog.componentInstance.user = new User(this.user.toJSON());
      dialog.componentInstance.userId = this.userId;
+     dialog.afterClosed().subscribe(result => {
+      this.getUser();
+    });
   }
 
   editHistory(){
     const dialog = this.dialog.open(DialogEditHistoryComponent);
     dialog.componentInstance.user = new User(this.user.toJSON());
     dialog.componentInstance.userId = this.userId;
+    dialog.afterClosed().subscribe(result => {
+      this.getUser();
+    });
   }
 
 }
