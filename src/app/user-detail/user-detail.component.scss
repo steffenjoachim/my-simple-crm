@@ -27,3 +27,29 @@
         margin-bottom: 0;
     }
 }
+
+@media (max-width: 650px){
+
+    .user-detail-header{
+        img{
+            display: none;
+        }
+    }
+
+}
+
+
+@media (max-width: 400px){
+
+    h2{
+        font-size: 16px;
+    }
+
+    p{
+        font-size: 12px;
+    }
+
+    mat-card-title{
+        font-size: 16px;
+    }
+}

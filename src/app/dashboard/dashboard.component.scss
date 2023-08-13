@@ -24,3 +24,42 @@
     }
 }
 
+@media(max-width: 400px){
+
+    .dashboard-container{
+        img{
+            height: 100px;
+        }
+    
+        h1{
+            font-size: 32px;
+        }
+    
+        p{
+            
+            font-size: 14px;
+        }
+    }
+
+}
+
+@media(max-width: 350px){
+
+    .dashboard-container{
+        img{
+            height: 50px;
+        }
+    
+        h1{
+            font-size: 20px;
+            margin-left: 8px;
+        }
+    
+        p{
+            margin-left: 8px;
+            margin-right: 8px;
+            font-size: 10px;
+        }
+    }
+
+}

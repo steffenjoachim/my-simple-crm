@@ -65,3 +65,28 @@ mat-toolbar, mat-toolbar-row{
     padding-top: 16px;
 }
 
+
+@media (max-width: 900px){
+    .sidenav{
+        width: 150px;
+    }
+}
+
+@media (max-width: 450px){
+    .router-container{
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .sidenav{
+        width: 130px;
+    }
+
+    .menu-items{
+
+        li{
+            padding-left: 8px;
+            padding-right: 8px;
+         }
+        }
+}

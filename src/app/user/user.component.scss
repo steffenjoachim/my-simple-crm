@@ -45,3 +45,15 @@ mat-card-content{
         }
     }
 }
+
+@media(max-width: 768px){
+.email{
+    display: none;
+}
+}
+
+@media(max-width: 450px){
+    .city{
+        display: none;
+    }
+    }
